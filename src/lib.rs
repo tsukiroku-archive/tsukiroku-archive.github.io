@@ -1,14 +1,20 @@
 use wasm_bindgen::prelude::*;
 
+use seed::prelude::*;
+
+mod view;
 mod ws;
+
+use view::*;
+use web_sys::HtmlBodyElement;
 use ws::default as wd;
 
 #[wasm_bindgen]
 pub fn wasm_init() -> Result<(), JsValue> {
-    let w = wd();
-    let element = w.document.create_element("h1")?;
-    element.set_text_content(Some("asdf"));
-
-    w.body.append_child(&element)?;
+    App::start("root", init, update, view);
+    wd().body
+        .dyn_into::<HtmlBodyElement>()
+        .unwrap()
+        .set_bg_color("#18191c");
     Ok(())
 }
