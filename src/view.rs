@@ -20,7 +20,8 @@ pub fn view(_: &Model) -> Node<Msg> {
             style! {
                 St::Display => "grid",
                 St::PlaceItems => "center",
-                St::MinHeight => "70vh"
+                St::MinHeight => "70vh",
+                St::Width => "100%"
             },
             a![
                 attrs! { At::Href => "https://youtu.be/jYvMWxKuCvQ" },
