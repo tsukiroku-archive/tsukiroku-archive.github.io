@@ -20,9 +20,9 @@ jobs:
       - name: wasm-pack build
         run: |
           wasm-pack build --target web
-          mv "${WPATH}/rwdv.js" "./"
-          mv "${WPATH}/rwdv_bg.wasm" "./"
-          mv "${WPATH}/rwdv_bg.wasm.d.ts" "./"
+          mv "rwdv.js" "./"
+          mv "rwdv_bg.wasm" "./"
+          mv "rwdv_bg.wasm.d.ts" "./"
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
