@@ -2,12 +2,19 @@ use wasm_bindgen::prelude::*;
 
 use seed::prelude::*;
 
+mod image;
 mod view;
 mod ws;
 
 use view::*;
 use web_sys::HtmlBodyElement;
 use ws::default as wd;
+
+#[wasm_bindgen]
+extern "C" {
+    #[wasm_bindgen(js_namespace = console)]
+    pub fn log(s: &str);
+}
 
 #[wasm_bindgen]
 pub fn wasm_init() -> Result<(), JsValue> {
