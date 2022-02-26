@@ -1,5 +1,7 @@
 use seed::{prelude::*, *};
 
+use crate::image::f;
+
 pub type Model = String;
 
 #[derive(Debug)]
@@ -25,9 +27,7 @@ pub fn view(_: &Model) -> Node<Msg> {
             },
             a![
                 attrs! { At::Href => "https://youtu.be/jYvMWxKuCvQ" },
-                img![
-                    attrs! {At::Src => "https://cdn.discordapp.com/attachments/889855991246626869/947073055186886666/17ebd9aa75013cb79.gif", At::Alt => "안아줘요"}
-                ]
+                img![attrs! {At::Src => f(), At::Alt => "안아줘요"}]
             ],
         ],
         div![
