@@ -7,7 +7,7 @@ use ws::default as wd;
 pub fn wasm_init() -> Result<(), JsValue> {
     let w = wd();
     let element = w.document.create_element("h1")?;
-    element.set_text_content(Some("test _"));
+    element.set_text_content(Some("asdf"));
 
     w.body.append_child(&element)?;
     Ok(())
