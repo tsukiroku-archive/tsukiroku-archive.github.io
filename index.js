@@ -1,6 +1,6 @@
-import init from "./pkg/rwdv.js";
+import init from "./wasm/rwdv.js";
 
 (async () => {
-  const wasm = await init("./pkg/rwdv_bg.wasm");
+  const wasm = await init("./wasm/rwdv_bg.wasm");
   wasm.wasm_init();
 })();
