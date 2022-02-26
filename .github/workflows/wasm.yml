@@ -20,6 +20,9 @@ jobs:
       - name: wasm-pack build
         run: |
           wasm-pack build --target web
+          if ! [[ -d "wasm" ]]; then
+            mkdir wasm;
+          fi
           mv "pkg/rwdv.js" "./wasm"
           mv "pkg/rwdv_bg.wasm" "./wasm"
           mv "pkg/rwdv_bg.wasm.d.ts" "./wasm"
