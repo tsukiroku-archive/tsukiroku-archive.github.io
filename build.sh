@@ -1,3 +1,5 @@
+cargo fmt
+
 WPATH="./pkg"
 
 wasm-pack build --target web
