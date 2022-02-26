@@ -1,0 +1,32 @@
+name: wasm
+
+on:
+  push:
+    branches:
+      - wasm
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: wasm-pack build
+        run: |
+          wasm-pack build --target web
+          mv "${WPATH}/rwdv.js" "./"
+          mv "${WPATH}/rwdv_bg.wasm" "./"
+          mv "${WPATH}/rwdv_bg.wasm.d.ts" "./"
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          exclude_assets : '.github,LICENSE,Cargo.lock,*.toml,.gitignore,README.md,src,target'
