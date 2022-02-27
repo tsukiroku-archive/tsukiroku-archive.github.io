@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use web_sys::{Document, HtmlElement, Window};
+use web_sys::{Document, HtmlElement, Window, *};
 
 #[derive(Debug)]
 pub struct Web {
@@ -10,12 +10,10 @@ pub struct Web {
     pub body: HtmlElement,
 }
 
-pub fn default() -> Web {
-    let w = web_sys::window().unwrap();
-    let d = w.document().unwrap();
-    return Web {
-        window: w,
-        document: d.clone(),
-        body: d.body().unwrap().clone(),
-    };
+pub fn default() -> Option<Web> {
+    Some(Web {
+        window: window()?,
+        document: window()?.document()?,
+        body: window()?.document()?.body()?,
+    })
 }
