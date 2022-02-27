@@ -16,7 +16,7 @@ pub fn update(_: Msg, _: &mut Model, _: &mut impl Orders<Msg>) {}
 pub fn view(_: &Model) -> Node<Msg> {
     div![
         style! {
-            St::FontFamily => "BMJUA"
+            St::FontFamily => "montserrat"
         },
         div![
             style! {
