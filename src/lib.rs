@@ -19,7 +19,8 @@ extern "C" {
 #[wasm_bindgen]
 pub fn wasm_init() -> Result<(), JsValue> {
     App::start("root", init, update, view);
-    wd().body
+    wd().unwrap()
+        .body
         .dyn_into::<HtmlBodyElement>()
         .unwrap()
         .set_bg_color("#18191c");
