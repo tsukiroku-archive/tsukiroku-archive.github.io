@@ -23,9 +23,9 @@ jobs:
           if ! [[ -d "wasm" ]]; then
             mkdir wasm;
           fi
-          mv "pkg/rwdv.js" "./wasm"
-          mv "pkg/rwdv_bg.wasm" "./wasm"
-          mv "pkg/rwdv_bg.wasm.d.ts" "./wasm"
+          mv "pkg/web.js" "./wasm"
+          mv "pkg/web_bg.wasm" "./wasm"
+          mv "pkg/web_bg.wasm.d.ts" "./wasm"
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
