@@ -42,8 +42,8 @@ pub fn view(_: &Model) -> Node<Msg> {
             p! {
                 "By ",
                 a! {
-                    "rwdv",
-                    attrs! { At::Href => "https://github.com/rwdv" },
+                    "tsukiroku",
+                    attrs! { At::Href => "https://github.com/tsukiroku" },
                     style! { St::TextDecoration => "none", St::Color => "rgb(255, 190, 200)" }
                 }
             }
