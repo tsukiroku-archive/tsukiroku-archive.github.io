@@ -9,9 +9,9 @@ jobs:
   depoly:
     runs-on: ubuntu-latest
     steps:
-      -name: dd
-      run: |
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npm run deploy
-      with:
-        GITHUB_TOKEN: ${GITHUB_TOKEN}
+      - name: dd
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy
+        with:
+          GITHUB_TOKEN: ${GITHUB_TOKEN}
