@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "yarn install && react-scripts build && react-scripts start",
-    "deploy": "gh-pages -d build"
+    "wfb": "yarn install && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
