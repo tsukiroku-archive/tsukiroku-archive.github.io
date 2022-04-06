@@ -1,4 +1,4 @@
-name: Deploy
+name: github pages
 
 on:
   push:
@@ -6,9 +6,12 @@ on:
       - main
 
 jobs:
-  -name: dd
-  run:
-    git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-    npm run deploy
-  env:
-    GITHUB_TOKEN: ${GITHUB_TOKEN}
+  depoly:
+    runs-on: ubuntu-latest
+    steps:
+      -name: dd
+      run:
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy
+      env:
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
