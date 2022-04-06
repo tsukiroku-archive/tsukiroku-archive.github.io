@@ -1,9 +1,9 @@
 {
-    "name": "web",
-    "version": "1.0.0",
-    "description": "static",
-    "license": "GNU GPLv3",
-    "scripts": {
-        "build": "tsc"
-    }
+  "name": "web",
+  "version": "1.0.0",
+  "description": "static",
+  "license": "GNU GPLv3",
+  "scripts": {
+    "build": "tsc"
+  }
 }
