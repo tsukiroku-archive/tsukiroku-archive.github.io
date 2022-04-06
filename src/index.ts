@@ -16,7 +16,7 @@ const execute = (command: string, _: string[]): ICommand => {
     case "github":
       return {
         execute: () => {
-          return "<a href=\"https://github.com/tsukiroku\">Click here.</a> <br>";
+          return '<a href="https://github.com/tsukiroku">Click here.</a> <br>';
         },
       };
     default:
@@ -31,8 +31,12 @@ const execute = (command: string, _: string[]): ICommand => {
 let input = document.querySelector("input");
 const terminal = document.body;
 
-const element =
-  '<span style="color: #00c800">root@User</span>:<span style="color: #106dca">~</span><span>$ </span><input type="text" class="input" autofocus />';
+const element = `
+<span style="color: #00c800">root@User</span
+><span style="color: #ffffff">:</span><span style="color: #106dca">~</span
+><span style="color: #ffffff">$ </span>
+<input type="text" class="input" autofocus />
+`;
 
 const init = () => {
   terminal?.addEventListener("click", () => {
