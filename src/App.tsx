@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import "./resource/css/style.css";
+
 interface ICommand {
   readonly execute: () => string;
   // readonly command: string;
@@ -16,7 +19,7 @@ const execute = (command: string, _: string[]): ICommand => {
     case "github":
       return {
         execute: () => {
-          return "<a href=\"https://github.com/tsukiroku\">Click here.</a> <br>";
+          return '<a href="https://github.com/tsukiroku">Click here.</a> <br>';
         },
       };
     default:
@@ -56,4 +59,18 @@ const init = () => {
   });
 };
 
-init();
+const App = () => {
+  useEffect(() => {
+    init();
+  });
+  return (
+    <div>
+      <span style={{ color: "#00c800" }}>root@User</span>:
+      <span style={{ color: "#106dca" }}>~</span>
+      <span>$ </span>
+      <input type="text" className="input" autoFocus />
+    </div>
+  );
+};
+
+export default App;
