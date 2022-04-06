@@ -61,6 +61,7 @@ const init = () => {
 
 const App = () => {
   useEffect(() => {
+    console.log("dd")
     init();
   });
   return (
