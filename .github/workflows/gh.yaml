@@ -9,9 +9,17 @@ jobs:
   depoly:
     runs-on: ubuntu-latest
     steps:
-      - name: dd
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy
-        env:
-          GITHUB_TOKEN: ${GITHUB_TOKEN}
+    - name: checkout
+      uses: actions/checkout@v2
+    
+    - name: build
+      run: |
+        npm install
+        npm run build
+
+    - name: deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with: 
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
