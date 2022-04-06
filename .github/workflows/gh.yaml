@@ -5,11 +5,10 @@ on:
     branches:
       - main
 
-jobs: 
-  steps:
-    -name: dd
-    run:
-      git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-      npm run deploy
-    env: 
-      GITHUB_TOKEN: ${GITHUB_TOKEN}
+jobs:
+  -name: dd
+  run:
+    git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+    npm run deploy
+  env:
+    GITHUB_TOKEN: ${GITHUB_TOKEN}
