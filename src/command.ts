@@ -49,6 +49,7 @@ const execute = (command: string, args: string[]): ICommand => {
     case "echo":
       return {
         execute: () => {
+          if (args.length === 0) return "<br>";
           return `${args.join(" ")}`;
         },
         command: "echo",
