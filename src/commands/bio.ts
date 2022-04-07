@@ -9,10 +9,6 @@ const on = (_command: string, args: string[]): ICommand => {
     execute: () => {
       if (args[0] == "--ko")
         return `
-${color(
-  "You can change the language to Korean using <strong>--ko</strong>.",
-  "ff6464"
-)}  
 <br>
   <div class="bio-title">
     <br>
