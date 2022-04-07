@@ -41,6 +41,8 @@ const execute = (command, args) => {
         case "echo":
             return {
                 execute: () => {
+                    if (args.length === 0)
+                        return "<br>";
                     return `${args.join(" ")}`;
                 },
                 command: "echo",
