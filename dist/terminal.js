@@ -7,7 +7,7 @@ const element = `
 <input type="text" class="input" autofocus />
 `;
 const addInputElement = (command = { execute: () => null, command: "", withNewline: false }, commandExecute = null, commandResult = "", _args = []) => {
-    terminal.innerHTML += `<span style="color: rgb(170, 170, 170);">${commandExecute ? `${commandResult} ${_args.join(" ")}` : ""}<span>\n<br> ${commandExecute ?? ""} ${command.withNewline ? "<br>" : ""} ${element}`;
+    terminal.innerHTML += `<span style="color: rgb(170, 170, 170);">${commandExecute ? `${commandResult} ${_args.join(" ")}` : ""}<span>\n${command.command == "clear" ? "" : "<br>"} ${commandExecute ?? ""} ${command.withNewline ? "<br>" : ""} ${element}`;
 };
 addInputElement();
 let input = document.querySelector("input");
