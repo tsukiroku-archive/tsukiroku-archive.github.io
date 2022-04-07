@@ -65,4 +65,4 @@ const execute = (command: string, args: string[]): ICommand => {
   }
 };
 
-export { execute };
+export { ICommand, execute };
