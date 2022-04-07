@@ -31,3 +31,14 @@ a:active {
 .input:focus {
     outline: none;
 }
+
+.bio-title {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+.bio-content {
+    text-align: center;
+    color: rgb(189, 189, 189);
+}
