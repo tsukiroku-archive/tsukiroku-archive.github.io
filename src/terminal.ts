@@ -17,9 +17,9 @@ const addInputElement = (
 ) => {
   terminal!.innerHTML += `<span style="color: rgb(170, 170, 170);">${
     commandExecute ? `${commandResult} ${_args.join(" ")}` : ""
-  }<span>\n<br> ${commandExecute ?? ""} ${
-    command.withNewline ? "<br>" : ""
-  } ${element}`;
+  }<span>\n${command.command == "clear" ? "" : "<br>"} ${
+    commandExecute ?? ""
+  } ${command.withNewline ? "<br>" : ""} ${element}`;
 };
 
 addInputElement();
