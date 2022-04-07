@@ -1,61 +1,21 @@
-import { terminal, init } from "./terminal.js";
+import * as commandExecute from "./commands/index.js";
 const commands = ["help", "github", "twitter", "clear", "echo"].sort();
 const execute = (command, args) => {
     if (!command)
         return { execute: () => null, command: command, withNewline: false };
     switch (command.toLowerCase()) {
         case "help":
-            return {
-                execute: () => {
-                    return `<br>${commands.join("<br>")}<br>`;
-                },
-                command: "help",
-                withNewline: true,
-            };
+            return commandExecute.help.on(command, args);
         case "github":
-            return {
-                execute: () => {
-                    return '<br><a href="https://github.com/tsukiroku">Click here.</a><br>';
-                },
-                command: "github",
-                withNewline: true,
-            };
+            return commandExecute.github.on(command, args);
         case "twitter":
-            return {
-                execute: () => {
-                    return '<br><a href="https://twitter.com/tsukiroku_t">Click here.</a><br>';
-                },
-                command: "twitter",
-                withNewline: true,
-            };
+            return commandExecute.twitter.on(command, args);
         case "clear":
-            return {
-                execute: () => {
-                    terminal.innerHTML = "";
-                    init();
-                    return null;
-                },
-                command: "clear",
-                withNewline: false,
-            };
+            return commandExecute.clear.on(command, args);
         case "echo":
-            return {
-                execute: () => {
-                    if (args.length === 0)
-                        return "<br>";
-                    return `${args.join(" ")}`;
-                },
-                command: "echo",
-                withNewline: true,
-            };
+            return commandExecute.echo.on(command, args);
         default:
-            return {
-                execute: () => {
-                    return `${command}: command not found.`;
-                },
-                command: command,
-                withNewline: true,
-            };
+            return commandExecute.on(command, args);
     }
 };
-export { execute };
+export { execute, commands };
