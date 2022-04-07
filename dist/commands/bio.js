@@ -6,7 +6,6 @@ const on = (_command, args) => {
         execute: () => {
             if (args[0] == "--ko")
                 return `
-${color("You can change the language to Korean using <strong>--ko</strong>.", "ff6464")}  
 <br>
   <div class="bio-title">
     <br>
