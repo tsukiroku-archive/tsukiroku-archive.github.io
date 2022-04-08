@@ -22,6 +22,10 @@ const addInputElement = (
   } ${command.withNewline ? "<br>" : ""} ${element}`;
 };
 
+const resizeInputElement = (size: number) => {
+  input!.style.width = `${size * 0.7}px`;
+}
+
 addInputElement();
 let input = document.querySelector("input");
 
@@ -41,8 +45,9 @@ const init = () => {
       input = document.querySelector("input");
       input?.focus();
       init();
+      resizeInputElement(window.innerWidth)
     }
   });
 };
 
-export { input, terminal, init, addInputElement };
+export { input, terminal, init, addInputElement, resizeInputElement };
