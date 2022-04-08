@@ -4,7 +4,7 @@ const color = (text, color) => {
 const on = (_command, args) => {
     return {
         execute: () => {
-            if (args[0] == "--ko")
+            if (args.join("") == "--ko")
                 return `
 <br>
   <div class="bio-title">
