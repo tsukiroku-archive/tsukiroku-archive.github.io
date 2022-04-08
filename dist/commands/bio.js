@@ -4,7 +4,7 @@ const color = (text, color) => {
 const on = (_command, args) => {
     return {
         execute: () => {
-            if (args[0] == "-ko")
+            if (args[0] == "ko")
                 return `
 <br>
   <div class="bio-title">
@@ -40,7 +40,7 @@ const on = (_command, args) => {
 <br>
             `;
             return `
-${color("You can change the language to Korean using <strong>-ko</strong> option.", "ff6464")}  
+${color("You can change the language to Korean using <strong>bio ko</strong>.", "ff6464")}  
 <br>
 <div class="bio-title">
   <br>
