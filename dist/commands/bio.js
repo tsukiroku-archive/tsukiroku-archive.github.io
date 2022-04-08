@@ -4,7 +4,7 @@ const color = (text, color) => {
 const on = (_command, args) => {
     return {
         execute: () => {
-            if (args[0] == "--ko" || args[0] == "—ko")
+            if (args[0] == "-ko")
                 return `
 <br>
   <div class="bio-title">
@@ -12,9 +12,13 @@ const on = (_command, args) => {
     <span>TSUKIROKU</span>
   </div>
   <div class="bio-content">
+    <div style="font-size: 1.5rem">
+        <br>
+        ${color("만나서 반갑습니다! 😄", "FFFFFF")}
+    </div>
     <br>
     <span>
-      주로
+      저는 주로
       ${color("TypeScript", "0081f7")}, 
       ${color("Javascript", "DFFF06")}, 
       ${color("Rust", "E9AD45")}
@@ -31,17 +35,12 @@ const on = (_command, args) => {
         <br>
         ${color("깃허브", "9cdaf0")}: <a href="https://github.com/tsukiroku">${color("@tsukiroku", "2aa9e0")}</a>
     </div>
-    <br>
-    <div style="font-size: 1.5rem">
-        <br>
-        ${color("만나서 반갑습니다! 😄", "FFFFFF")}
-    </div>
   </span>
 </div>
 <br>
             `;
             return `
-${color("You can change the language to Korean using <strong>--ko</strong>.", "ff6464")}  
+${color("You can change the language to Korean using <strong>-ko</strong> option.", "ff6464")}  
 <br>
 <div class="bio-title">
   <br>
