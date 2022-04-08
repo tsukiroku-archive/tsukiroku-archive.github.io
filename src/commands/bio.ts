@@ -7,7 +7,7 @@ const color = (text: string, color: string) => {
 const on = (_command: string, args: string[]): ICommand => {
   return {
     execute: () => {
-      if (args.join("") == "--ko") {
+      if (args[0] == "--ko" || args[0] == "—ko")
         return `
 <br>
   <div class="bio-title">
@@ -55,8 +55,7 @@ const on = (_command: string, args: string[]): ICommand => {
 </div>
 <br>
             `;
-      } else {
-        return `
+      return `
 ${color(
   "You can change the language to Korean using <strong>--ko</strong>.",
   "ff6464"
@@ -89,17 +88,17 @@ ${color(
         "Twitter",
         "2aa9e0"
       )}: <a href="https://twitter.com/tsukiroku_t">${color(
-          "@tsukiroku_t",
-          "2aa9e0"
-        )}</a>
+        "@tsukiroku_t",
+        "2aa9e0"
+      )}</a>
       <br>
       ${color(
         "Github",
         "9cdaf0"
       )}: <a href="https://github.com/tsukiroku">${color(
-          "@tsukiroku",
-          "2aa9e0"
-        )}</a>
+        "@tsukiroku",
+        "2aa9e0"
+      )}</a>
     </div>
     <br>
     <div style="font-size: 1.5rem">
@@ -110,7 +109,6 @@ ${color(
 </div>
 <br>
       `;
-      }
     },
     command: "bio",
     withNewline: true,
