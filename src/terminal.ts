@@ -23,7 +23,7 @@ const addInputElement = (
 };
 
 const resizeInputElement = (size: number) => {
-  input!.style.width = `${size * 0.7}px`;
+  input!.style.width = `${size / 2}px`;
 }
 
 addInputElement();
