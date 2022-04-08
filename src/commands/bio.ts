@@ -7,7 +7,7 @@ const color = (text: string, color: string) => {
 const on = (_command: string, args: string[]): ICommand => {
   return {
     execute: () => {
-      if (args[0] == "-ko")
+      if (args[0] == "ko")
         return `
 <br>
   <div class="bio-title">
@@ -56,7 +56,7 @@ const on = (_command: string, args: string[]): ICommand => {
             `;
       return `
 ${color(
-  "You can change the language to Korean using <strong>-ko</strong> option.",
+  "You can change the language to Korean using <strong>bio ko</strong>.",
   "ff6464"
 )}  
 <br>
