@@ -4,6 +4,7 @@ import * as twitter from "./twitter.js";
 import * as clear from "./clear.js";
 import * as echo from "./echo.js";
 import * as bio from "./bio.js";
+import * as debug from "./debug.js";
 const on = (command, args) => {
     return {
         execute: () => {
@@ -14,4 +15,4 @@ const on = (command, args) => {
     };
 };
 export { on };
-export { help, github, twitter, clear, echo, bio };
+export { help, github, twitter, clear, echo, bio, debug };
