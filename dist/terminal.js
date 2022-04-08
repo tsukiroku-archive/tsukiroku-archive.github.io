@@ -9,6 +9,9 @@ const element = `
 const addInputElement = (command = { execute: () => null, command: "", withNewline: false }, commandExecute = null, commandResult = "", _args = []) => {
     terminal.innerHTML += `<span style="color: rgb(170, 170, 170);">${commandExecute ? `${commandResult} ${_args.join(" ")}` : ""}<span>\n${command.command == "clear" ? "" : "<br>"} ${commandExecute ?? ""} ${command.withNewline ? "<br>" : ""} ${element}`;
 };
+const resizeInputElement = (size) => {
+    input.style.width = `${size * 0.7}px`;
+};
 addInputElement();
 let input = document.querySelector("input");
 const init = () => {
@@ -26,7 +29,8 @@ const init = () => {
             input = document.querySelector("input");
             input?.focus();
             init();
+            resizeInputElement(window.innerWidth);
         }
     });
 };
-export { input, terminal, init, addInputElement };
+export { input, terminal, init, addInputElement, resizeInputElement };
