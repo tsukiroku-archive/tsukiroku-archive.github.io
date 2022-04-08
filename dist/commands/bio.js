@@ -4,7 +4,7 @@ const color = (text, color) => {
 const on = (_command, args) => {
     return {
         execute: () => {
-            if (args.join("") == "--ko") {
+            if (args[0] == "--ko" || args[0] == "—ko")
                 return `
 <br>
   <div class="bio-title">
@@ -40,9 +40,7 @@ const on = (_command, args) => {
 </div>
 <br>
             `;
-            }
-            else {
-                return `
+            return `
 ${color("You can change the language to Korean using <strong>--ko</strong>.", "ff6464")}  
 <br>
 <div class="bio-title">
@@ -81,7 +79,6 @@ ${color("You can change the language to Korean using <strong>--ko</strong>.", "f
 </div>
 <br>
       `;
-            }
         },
         command: "bio",
         withNewline: true,
