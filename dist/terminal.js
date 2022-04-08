@@ -10,7 +10,7 @@ const addInputElement = (command = { execute: () => null, command: "", withNewli
     terminal.innerHTML += `<span style="color: rgb(170, 170, 170);">${commandExecute ? `${commandResult} ${_args.join(" ")}` : ""}<span>\n${command.command == "clear" ? "" : "<br>"} ${commandExecute ?? ""} ${command.withNewline ? "<br>" : ""} ${element}`;
 };
 const resizeInputElement = (size) => {
-    input.style.width = `${size * 0.7}px`;
+    input.style.width = `${size / 2}px`;
 };
 addInputElement();
 let input = document.querySelector("input");
