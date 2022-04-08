@@ -1,5 +1,6 @@
-import { init, input } from "./terminal.js";
+import { init, resizeInputElement } from "./terminal.js";
 init();
+resizeInputElement(window.innerWidth);
 window.addEventListener("resize", () => {
-    input.width = window.innerWidth - window.innerWidth / 5;
+    resizeInputElement(window.innerWidth);
 });
