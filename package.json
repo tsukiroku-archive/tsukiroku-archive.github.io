@@ -4,6 +4,7 @@
   "description": "static",
   "license": "GNU GPLv3",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc -w"
   }
 }
