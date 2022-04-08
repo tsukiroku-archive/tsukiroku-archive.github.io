@@ -9,7 +9,7 @@ body {
 
 .input {
     width: 70%;
-    background-color: black;
+    background-color: rgb(205, 86, 86);
     border-width: 0;
     color: rgb(170, 170, 170);
     font-family: 'Cascadia Code';
