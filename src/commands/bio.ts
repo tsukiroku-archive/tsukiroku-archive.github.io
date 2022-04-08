@@ -7,7 +7,7 @@ const color = (text: string, color: string) => {
 const on = (_command: string, args: string[]): ICommand => {
   return {
     execute: () => {
-      if (args[0] == "--ko")
+      if (args.join("") == "--ko")
         return `
 <br>
   <div class="bio-title">
