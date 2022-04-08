@@ -32,6 +32,8 @@ const execute = (command: string, args: string[]): ICommand => {
       return commandExecute.echo.on(command, args);
     case "bio":
       return commandExecute.bio.on(command, args);
+    case "debug":
+      return commandExecute.debug.on(command, args);
     default:
       return commandExecute.on(command, args);
   }
