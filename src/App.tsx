@@ -1,4 +1,4 @@
-import "./style.css";
+import "../resource/style.css";
 import React from "react";
 
 const App = () => {
