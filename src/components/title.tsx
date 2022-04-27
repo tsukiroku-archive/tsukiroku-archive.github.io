@@ -6,6 +6,7 @@ const Title = () => {
     const { ref: ref, animate } = useWebAnimations<HTMLDivElement>({
         ...headShake,
     });
+
     const { ref: textRef } = useWebAnimations<HTMLDivElement>({
         keyframes: [
             { transform: "none", opacity: 0, offset: 0 },
@@ -18,6 +19,7 @@ const Title = () => {
             fill: "forwards",
         },
     });
+
     const { ref: block } = useWebAnimations<HTMLDivElement>({
         keyframes: { width: ["0", "100%", "0"], left: ["0", "0", "100%"] },
         animationOptions: {
@@ -26,11 +28,13 @@ const Title = () => {
             easing: "cubic-bezier(0.74, 0.06, 0.4, 0.92)",
         },
     });
+
     useEffect(() => {
         document.addEventListener("mousedown", () => {
             animate({ ...headShake });
         });
     }, [animate]);
+    
     return (
         <div>
             <div className="text">
