@@ -7,6 +7,7 @@
 body {
     font-family: "JSDongkang-Regular";
     background-color: rgb(20, 20, 20);
+    font-size: 150%;
     margin: auto;
 }
 
@@ -19,15 +20,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    text-align: center;
 }
 
 .text h1 {
+    color: rgb(255, 255, 255);
     opacity: 0;
 }
 
+.aboutme {
+    top: -10%;
+    opacity: 0;
+    color:rgb(179, 179, 179)
+}
+
 .block {
-    background: rgb(255, 255, 255);
+    background: rgb(222, 222, 222);
     position: absolute;
     height: 10%;
 }
