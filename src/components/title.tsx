@@ -1,4 +1,3 @@
-import "../../resource/style.css";
 import React, { useEffect } from "react";
 
 import useWebAnimations, { headShake } from "@wellyshen/use-web-animations";
@@ -14,7 +13,7 @@ const Title = () => {
             { transform: "translateY(-170%)", opacity: 1, offset: 1 },
         ],
         animationOptions: {
-            delay: 1000,
+            delay: 1500,
             duration: 1500,
             fill: "forwards",
         },
