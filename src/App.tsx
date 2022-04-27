@@ -1,16 +1,17 @@
 import "../resource/style.css";
-import React from "react";
+import React, { useEffect } from "react";
 
-import useWebAnimations, { bounce } from "@wellyshen/use-web-animations";
+import useWebAnimations, { headShake } from "@wellyshen/use-web-animations";
 
 const App = () => {
-    const { ref } = useWebAnimations({ ...bounce });
-
+    const { ref, animate } = useWebAnimations({ ...headShake });
+    useEffect(() => {
+        document.addEventListener("mousedown", () => {
+            animate({ ...headShake });
+        });
+    }, [animate]);
     return (
-        <div
-            style={{ textAlign: "center", color: "rgb(230, 230, 230)" }}
-            ref={ref as React.RefObject<HTMLDivElement>}
-        >
+        <div className="text" ref={ref as React.RefObject<HTMLDivElement>}>
             <h1>공사중입니다</h1>
         </div>
     );
