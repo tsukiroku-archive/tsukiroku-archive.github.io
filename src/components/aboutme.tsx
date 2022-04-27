@@ -1,7 +1,6 @@
-import "../../resource/style.css";
-import React, { useEffect } from "react";
+import React from "react";
 
-import useWebAnimations, { headShake } from "@wellyshen/use-web-animations";
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 const AboutMe = () => {
     const { ref: textRef } = useWebAnimations<HTMLDivElement>({
@@ -10,7 +9,7 @@ const AboutMe = () => {
             { transform: "none", opacity: 1, offset: 1 },
         ],
         animationOptions: {
-            delay: 2300,
+            delay: 2800,
             duration: 500,
             fill: "forwards",
         },
