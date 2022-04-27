@@ -4,11 +4,23 @@
         format("woff");
 }
 
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: "JSDongkang-Regular";
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(232, 232, 232);
     font-size: 150%;
     margin: auto;
+}
+
+::-moz-selection, ::selection {
+    background: #909090;
+    color: #000;
 }
 
 .text {
@@ -24,18 +36,19 @@ body {
 }
 
 .text h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     opacity: 0;
+    font-family: "TmonMonsori";
 }
 
 .aboutme {
     top: -10%;
     opacity: 0;
-    color:rgb(179, 179, 179)
+    color:rgb(37, 37, 37)
 }
 
 .block {
-    background: rgb(222, 222, 222);
+    background: rgb(21, 21, 21);
     position: absolute;
-    height: 10%;
+    height: 30%;
 }
