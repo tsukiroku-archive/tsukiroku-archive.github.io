@@ -14,6 +14,7 @@ const AboutMe = () => {
             fill: "forwards",
         },
     });
+
     return (
         <div>
             <div className="text">
