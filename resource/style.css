@@ -16,6 +16,7 @@ body {
     background-color: rgb(232, 232, 232);
     font-size: 150%;
     margin: auto;
+    cursor: default;
 }
 
 ::-moz-selection, ::selection {
@@ -42,13 +43,43 @@ body {
 }
 
 .aboutme {
-    top: -10%;
     opacity: 0;
-    color:rgb(79, 79, 79)
+    font-size: 100%;
+    color:rgb(79, 79, 79);
+}
+
+.text-project {
+    color: rgb(49, 49, 49);
+    font-family: "JSDongkang-Regular";
+    font-size: 150%;
+    transform: translate(0, 250%);
 }
 
 .block {
     background: rgb(21, 21, 21);
     position: absolute;
-    height: 30%;
+    height: 100px;
+}
+
+.project {
+    color: rgb(82, 82, 82);
+    font-family: "JSDongkang-Regular";
+    font-size: 0.8em;
+}
+
+.project-description {
+    color: rgb(126, 126, 126);
+    font-size: 80%;
+}
+
+@media (max-width: 768px) {
+    .aboutme {
+        font-size: 0.8em;
+    }
+    .project {
+        font-size: 0.3em;
+    }
+    .project-description {
+        font-size: 0.5em;
+    }
 }
