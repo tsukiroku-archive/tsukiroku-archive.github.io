@@ -34,7 +34,7 @@ const Title = () => {
             animate({ ...headShake });
         });
     }, [animate]);
-    
+
     return (
         <div>
             <div className="text">
