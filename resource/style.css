@@ -6,9 +6,8 @@
 
 @font-face {
     font-family: 'TmonMonsori';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') 
+        format('woff');
 }
 
 body {
@@ -17,6 +16,10 @@ body {
     font-size: 150%;
     margin: auto;
     cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ::-moz-selection, ::selection {
@@ -50,8 +53,6 @@ body {
 
 .text-project {
     color: rgb(49, 49, 49);
-    font-family: "JSDongkang-Regular";
-    font-size: 150%;
     transform: translate(0, 250%);
 }
 
@@ -74,10 +75,10 @@ body {
 
 @media (max-width: 768px) {
     .aboutme {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     .project {
-        font-size: 0.3em;
+        font-size: 0.5em;
     }
     .project-description {
         font-size: 0.5em;
