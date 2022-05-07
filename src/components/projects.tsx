@@ -27,6 +27,11 @@ const Projects = () => {
                         description="Personal website"
                         translate={5}
                     />
+                    <Project
+                        name="tsukiroku/gist"
+                        description="Asynchronous gist API wrapper"
+                        translate={10}
+                    />
                 </div>
             </div>
         </div>
