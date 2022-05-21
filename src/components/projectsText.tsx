@@ -1,5 +1,5 @@
-import useWebAnimations from "@wellyshen/use-web-animations";
-import React from "react";
+import useWebAnimations from '@wellyshen/use-web-animations';
+import React from 'react';
 
 interface IProps {
     name: string;
@@ -16,13 +16,14 @@ const Project = (props: IProps) => {
             },
         ],
         animationOptions: {
-            fill: "forwards",
+            fill: 'forwards',
         },
     });
 
     return (
         <div className="text" ref={textRef}>
-            <p className="project">{props.name} — </p><p className="project-description">{props.description}</p>
+            <p className="project">{props.name}&nbsp;&nbsp;&nbsp;</p>
+            <p className="project-description">{props.description}</p>
         </div>
     );
 };
