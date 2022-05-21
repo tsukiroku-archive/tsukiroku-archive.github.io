@@ -19,11 +19,9 @@ const AboutMe = () => {
         <div>
             <div className="text">
                 <h3 className="aboutme" ref={textRef}>
-                    반갑습니다!
+                    Typescript, JavaScript, Rust
                     <br />
-                    TypeScript를 사용하며, C/C++, Rust 등도 어느정도 다룰 수 있습니다.
-                    <br />
-                    Adobe Ps, Ai, Ae, Pr 등을 사용하여, 디자인/미디어 작업도 가능합니다.
+                    Adobe Ps, Ai, Ae, Pr
                     <br />
                 </h3>
             </div>
