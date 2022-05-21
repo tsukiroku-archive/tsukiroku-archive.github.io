@@ -1,7 +1,7 @@
-import React from "react";
-import Project from "./projects_text";
+import React from 'react';
+import Project from './projectsText';
 
-import useWebAnimations from "@wellyshen/use-web-animations";
+import useWebAnimations from '@wellyshen/use-web-animations';
 
 const Projects = () => {
     const { ref: ref } = useWebAnimations<HTMLDivElement>({
@@ -9,7 +9,7 @@ const Projects = () => {
         animationOptions: {
             delay: 4300,
             duration: 1500,
-            fill: "both",
+            fill: 'both',
         },
     });
 
@@ -25,12 +25,17 @@ const Projects = () => {
                     <Project
                         name="tsukiroku/tsukiroku.github.io"
                         description="Personal website"
-                        translate={5}
+                        translate={7}
                     />
                     <Project
                         name="tsukiroku/gist"
                         description="Asynchronous gist API wrapper"
-                        translate={10}
+                        translate={14}
+                    />
+                    <Project
+                        name="twitter-readme-profile"
+                        description="twitter-readme-profile.vercel.app"
+                        translate={21}
                     />
                 </div>
             </div>
