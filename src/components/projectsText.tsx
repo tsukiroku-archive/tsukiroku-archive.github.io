@@ -11,7 +11,7 @@ const Project = (props: IProps) => {
     const { ref: textRef } = useWebAnimations<HTMLDivElement>({
         keyframes: [
             {
-                transform: `translate(0, ${30 + (props.translate ?? 0)}%)`,
+                transform: `translate(0, ${30 + 7 * (props.translate ?? 0)}%)`,
                 offset: 1,
             },
         ],
