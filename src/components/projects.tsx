@@ -25,17 +25,17 @@ const Projects = () => {
                     <Project
                         name="tsukiroku/tsukiroku.github.io"
                         description="Personal website"
-                        translate={7}
+                        translate={1}
                     />
                     <Project
                         name="tsukiroku/gist"
                         description="Asynchronous gist API wrapper"
-                        translate={14}
+                        translate={2}
                     />
                     <Project
                         name="twitter-readme-profile"
                         description="twitter-readme-profile.vercel.app"
-                        translate={21}
+                        translate={3}
                     />
                 </div>
             </div>
