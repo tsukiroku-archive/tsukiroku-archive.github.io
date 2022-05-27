@@ -11,7 +11,7 @@ const Title = () => {
         keyframes: [
             { transform: 'none', opacity: 0, offset: 0 },
             { transform: 'none', opacity: 1, offset: 0.8 },
-            { transform: 'translateY(-170%)', opacity: 1, offset: 1 },
+            { transform: 'translateY(-100%)', opacity: 1, offset: 1 },
         ],
         animationOptions: {
             delay: 1500,
