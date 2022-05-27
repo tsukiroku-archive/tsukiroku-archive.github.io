@@ -6,7 +6,7 @@ const AboutMe = () => {
     const { ref: textRef } = useWebAnimations<HTMLDivElement>({
         keyframes: [
             { transform: 'translate3d(0, 500%, 0)', opacity: 0, offset: 0 },
-            { transform: 'translate3d(0, 0, 0)', opacity: 1, offset: 1 },
+            { transform: 'translate3d(0, 50%, 0)', opacity: 1, offset: 1 },
         ],
         animationOptions: {
             delay: 3500,
