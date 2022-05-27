@@ -1,17 +1,17 @@
 @font-face {
-    font-family: "JSDongkang-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff")
-        format("woff");
+    font-family: 'JSDongkang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff')
+        format('woff');
 }
 
 @font-face {
     font-family: 'TmonMonsori';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff')
         format('woff');
 }
 
 body {
-    font-family: "JSDongkang-Regular";
+    font-family: 'JSDongkang-Regular';
     background-color: rgb(232, 232, 232);
     font-size: 150%;
     margin: auto;
@@ -22,7 +22,8 @@ body {
     user-select: none;
 }
 
-::-moz-selection, ::selection {
+::-moz-selection,
+::selection {
     background: #909090;
     color: rgb(50, 50, 50);
 }
@@ -42,45 +43,18 @@ body {
 .text h1 {
     color: rgb(0, 0, 0);
     opacity: 0;
-    font-family: "TmonMonsori";
+    font-family: 'TmonMonsori';
+    font-size: 10vh;
 }
 
 .aboutme {
     opacity: 0;
-    font-size: 100%;
-    color:rgb(79, 79, 79);
-}
-
-.text-project {
-    color: rgb(49, 49, 49);
-    transform: translate(0, 300%);
+    font-size: 5vh;
+    color: rgb(79, 79, 79);
 }
 
 .block {
     background: rgb(21, 21, 21);
     position: absolute;
-    height: 100px;
-}
-
-.project {
-    color: rgb(82, 82, 82);
-    font-family: "JSDongkang-Regular";
-    font-size: 0.8em;
-}
-
-.project-description {
-    color: rgb(126, 126, 126);
-    font-size: 80%;
-}
-
-@media (max-width: 768px) {
-    .aboutme {
-        font-size: 0.6em;
-    }
-    .project {
-        font-size: 0.5em;
-    }
-    .project-description {
-        font-size: 0.5em;
-    }
+    height: 15vh;
 }
