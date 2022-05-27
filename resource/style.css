@@ -44,17 +44,17 @@ body {
     color: rgb(0, 0, 0);
     opacity: 0;
     font-family: 'TmonMonsori';
-    font-size: 10vh;
+    font-size: 8vh;
 }
 
 .aboutme {
     opacity: 0;
-    font-size: 5vh;
+    font-size: 3vh;
     color: rgb(79, 79, 79);
 }
 
 .block {
     background: rgb(21, 21, 21);
     position: absolute;
-    height: 15vh;
+    height: 12vh;
 }
